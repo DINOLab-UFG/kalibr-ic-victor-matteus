@@ -1,0 +1,22 @@
+# #Accelerometer
+# accelerometer_noise_density: 0.002882615437305133 
+# accelerometer_random_walk: 0.00027415340294600595 
+# #Gyroscope
+# gyroscope_noise_density: 0.00017529414354630325 
+# gyroscope_random_walk: 2.1950875358629747e-06 
+
+# Tipically we inflate these values by 10x to account for the fact that the IMU is not perfect
+
+# white values - x5
+# walking values - x10
+
+#Accelerometer
+accelerometer_noise_density: 0.01441307718 
+accelerometer_random_walk: 0.00274153402 
+#Gyroscope
+gyroscope_noise_density: 0.00087647071 
+gyroscope_random_walk: 0.00002195087 
+
+rostopic: '/t265/imu' 
+update_rate: 200 
+

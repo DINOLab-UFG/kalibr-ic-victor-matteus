@@ -1,0 +1,35 @@
+# The camera intrinsics are parameters that define the internal characteristics 
+# of the camera lens and sensor. These parameters are essential for many computer vision tasks such as 3D 
+# reconstruction, camera calibration, and image rectification. 
+
+# Both cameras use a "pinhole" camera model, which is a standard model used in computer vision that approximates 
+# the way light rays pass through the camera lens and form an image on the sensor.
+
+cam0:
+  cam_overlaps: [1]
+  camera_model: pinhole
+# The distortion coefficients account for lens distortion,
+# which can cause straight lines to appear curved in the captured images.
+  distortion_coeffs: [-0.008747800085824447, 0.04669796865951601, -0.04348086746351353, 0.007859294528663]
+  distortion_model: equidistant
+# Focal length and principal point of the camera(fx, fy, cx, cy)
+# fx, fy: focal length in pixels: Physical parameter: distance from the center to the image plane in pixels.
+# cx, cy: principal point in pixels: The principal point is the point where the optical axis intersects the image plane. 
+  intrinsics: [285.2489878860831, 285.99964868407267, 426.51375763352166, 404.9772011788081]
+  resolution: [848, 800]
+  rostopic: /t265/fisheye1/image_raw
+cam1:
+  T_cn_cnm1:
+  - [0.9999858014315856, -0.0014671235863016237, -0.005122937010143893, -0.06462599383496645] # distan
+  - [0.0014785974955741582, 0.999996405579006, 0.0022366444760041344, -0.000277465334020221]
+  - [0.005119637162286641, -0.0022441874806877087, 0.9999843763468887, -0.00021815383939144495]
+  - [0.0, 0.0, 0.0, 1.0] # lembrar o que é depois
+  cam_overlaps: [0]
+  camera_model: pinhole
+  distortion_coeffs: [-0.010128276510389637, 0.0509413938683162, -0.04827038583558463, 0.00973320146732395]
+  distortion_model: equidistant
+  intrinsics: [285.4999216305412, 286.20780673320627, 430.61379773875336, 398.762531607328]
+  resolution: [848, 800]
+  rostopic: /t265/fisheye2/image_raw
+
+

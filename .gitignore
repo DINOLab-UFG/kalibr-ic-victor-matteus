@@ -53,3 +53,6 @@ Build
 
 # vs-code
 .vscode
+
+# rosbags
+results/bags
